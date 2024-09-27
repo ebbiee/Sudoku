@@ -9,7 +9,7 @@ import './css/styles.css';
 
 const cells = document.querySelectorAll('.sudoku-cell');
 const numberButtons = document.querySelectorAll('.sudoku-options button');
-const checkPuzzle = $(".checkbtn")
+const checkPuzzle = $("#checkbtn")
 let selectedCell = null;
 let currentSolution = [];
 
