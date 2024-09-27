@@ -36,26 +36,6 @@ function checkSolution() {
         alert("Some numbers are incorrect. Please check again.");
     }
 }
-
-
-
-
-
-
-cells.forEach(cell => {
-    cell.addEventListener('click', () => {
-        selectedCell = cell;
-    });
-});
-
-numberButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        if (selectedCell) {
-            selectedCell.textContent = button.textContent;
-            selectedCell = null;
-        }
-    });
-});
 function generatePuzzle() {
     const buttons = $(".easy, .medium, .hard");
     buttons.each(function() {
@@ -78,6 +58,26 @@ function generatePuzzle() {
         });
     });
 }
+
+
+
+
+
+cells.forEach(cell => {
+    cell.addEventListener('click', () => {
+        selectedCell = cell;
+    });
+});
+
+numberButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        if (selectedCell) {
+            selectedCell.textContent = button.textContent;
+            selectedCell = null;
+        }
+    });
+});
+
 
 checkPuzzle.on("click", checkSolution);
 generatePuzzle()
